@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import * as appActionCreators from './App.actions';
 import './App.css';
-import Header from '../../components/commom/Header'
+import Header from '../../components/commom/header/Header'
 
 class App extends Component {
 
