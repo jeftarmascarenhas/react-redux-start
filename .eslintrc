@@ -1,0 +1,30 @@
+{
+  "extends": [
+   "eslint:recommended",
+   "plugin:react/recommended",
+   "react-app"
+  ],
+  "parserOptions": {
+   "ecmaFeatures": {
+     "jsx": true
+   }
+ },
+  "globals":{
+     "describe":true,
+     "it":true,
+     "expect":true,
+     "app":true,
+     "request":true,
+     "beforeEach":true
+   },
+   "env": {
+     "browser": true,
+     "jest": true,
+     "es6": true
+   },
+   "rules": {
+     "react/jsx-uses-react": "error",
+     "react/jsx-uses-vars": "error"
+   }
+ 
+ }
