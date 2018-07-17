@@ -3,35 +3,36 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import * as appActionCreators from './App.actions';
-import './App.css';
-import Header from '../../components/commom/header/Header'
+import * as appActionCreators from './App.actions'
+import './App.css'
+import Header from '../../components/commom/Header'
 
 class App extends Component {
-
   componentDidMount() {
-    this.props.getText()
+    const { getText } = this.props
+    getText('New Redux Text...')
   }
 
   render() {
+    const { text } = this.props
     return (
       <div className="App">
         <Header />
         <p className="App-intro">
-          { this.props.text }
+          {text}
         </p>
       </div>
-    );
+    )
   }
 }
 
 App.propTypes = {
   getText: PropTypes.func.isRequired,
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
 }
 
-const mapStateToProps = (state) => ({ text: state.text })
-const mapDispatchToProps = (dispatch) => bindActionCreators(appActionCreators, dispatch)
+const mapStateToProps = state => ({ text: state.text })
+const mapDispatchToProps = dispatch => bindActionCreators(appActionCreators, dispatch)
 
 const AppConnect = connect(mapStateToProps, mapDispatchToProps)(App)
 

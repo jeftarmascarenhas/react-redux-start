@@ -1,53 +1,27 @@
 {
   "extends": [
-<<<<<<< HEAD
-   "eslint:recommended",
-   "plugin:react/recommended",
-   "react-app"
-  ],
-  "parserOptions": {
-   "ecmaFeatures": {
-     "jsx": true
-   }
- },
-  "globals":{
-     "describe":true,
-     "it":true,
-     "expect":true,
-     "app":true,
-     "request":true,
-     "beforeEach":true
-   },
-   "env": {
-     "browser": true,
-     "jest": true,
-     "es6": true
-   },
-   "rules": {
-     "react/jsx-uses-react": "error",
-     "react/jsx-uses-vars": "error"
-   }
- 
- }
-=======
     "eslint:recommended",
     "plugin:react/recommended",
-    "react-app"
+    "airbnb"
    ],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
-        "jsx": true
+      "jsx": true
     }
   },
   "rules": {
-      "semi": 2
+      "semi": [2, "never"],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/button-has-type": false,
+      "import/no-extraneous-dependencies": false,
+      "import/prefer-default-export": false
   },
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   }
 }
->>>>>>> 5b63c6c478ee3982baa9fd54a5254e5f6e077fa2
