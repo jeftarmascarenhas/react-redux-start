@@ -7,6 +7,8 @@ import * as appActionCreators from './App.actions'
 import './App.css'
 import Header from '../../components/commom/Header'
 
+import Logo from '../../images/logo.svg'
+
 class App extends Component {
   componentDidMount() {
     const { getText } = this.props
@@ -17,7 +19,9 @@ class App extends Component {
     const { text } = this.props
     return (
       <div className="App">
-        <Header />
+        <Header
+          logo={Logo}
+        />
         <p className="App-intro">
           {text}
         </p>
