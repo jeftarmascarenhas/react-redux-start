@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import * as appActionCreators from './App.actions';
@@ -8,7 +9,7 @@ import Header from '../../components/commom/header/Header'
 
 class App extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.getText()
   }
 
@@ -22,6 +23,11 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  getText: PropTypes.func.isRequired,
+  text: PropTypes.string,
 }
 
 const mapStateToProps = (state) => ({ text: state.text })

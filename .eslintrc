@@ -1,5 +1,6 @@
 {
   "extends": [
+<<<<<<< HEAD
    "eslint:recommended",
    "plugin:react/recommended",
    "react-app"
@@ -28,3 +29,25 @@
    }
  
  }
+=======
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "react-app"
+   ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
+    }
+  },
+  "rules": {
+      "semi": 2
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  }
+}
+>>>>>>> 5b63c6c478ee3982baa9fd54a5254e5f6e077fa2
