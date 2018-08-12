@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
-import text from '../containers/app/App.reducer';
+import { combineReducers } from 'redux'
+import text from '../containers/app/App.reducer'
 
 const rootReducers = combineReducers({
-  text
-});
+  text,
+})
 
-export default rootReducers;
+export default rootReducers
