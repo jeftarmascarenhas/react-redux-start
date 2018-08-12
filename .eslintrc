@@ -2,21 +2,32 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "react-app"
+    "airbnb"
    ],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
-        "jsx": true
+      "jsx": true
     }
   },
   "rules": {
-      "semi": 2
+      "class-methods-use-this": 0,
+      "import/imports-first": 0,
+      "import/no-named-as-default-member": 0,
+      "semi": [2, "never"],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/button-has-type": false,
+      "import/no-extraneous-dependencies": false,
+      "import/prefer-default-export": false,
+      "import/no-named-as-default": 0,
+      "import/no-unresolved": 2,
+      "import/no-webpack-loader-syntax": 0
   },
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   }
 }
